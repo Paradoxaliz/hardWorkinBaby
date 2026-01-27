@@ -7,7 +7,7 @@ mkdir mysql-phpmyadmin
 
 Переходим в папку проекта
 ```shell
-cd mysql-phpmyadmin/
+cd mysql-phpmyadmin
 ```
 
 Создаём и редактируем файл настроек композера
@@ -117,12 +117,14 @@ docker compose ps
 
 Полезные команды
 
-### Перезапустить
-```shell
-docker compose restart
-```
-
 ### Просмотр логов в реальном времени
 ```shell
 docker compose logs -f mysql
+```
+
+`-f` в режиме ожидания (в режиме реального времени)
+
+### Перезапустить
+```shell
+docker compose restart
 ```
