@@ -17,9 +17,11 @@ echo "Hello from HTTP server" > test.txt
 docker run -d `
   --name http-server `
   -p 8082:80 `
-  -v $(pwd):/usr/share/nginx/html `
+  -v ${PWD}:/usr/share/nginx/html `
   nginx:alpine
 ```
+
+> Если эта команда в Powershell не работает, то удалите из кода апострофы `
 
 в **Git-Bash/Linux/WSL 2.0/Mac**
 ```shell
@@ -29,6 +31,7 @@ docker run -d \
   -v $(pwd):/usr/share/nginx/html \
   nginx:alpine
 ```
+
 3. Проверьте
 ```shell
 curl http://localhost:8082/test.txt

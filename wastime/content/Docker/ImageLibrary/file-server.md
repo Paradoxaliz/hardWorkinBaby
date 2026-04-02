@@ -15,9 +15,11 @@
 docker run -d `
   --name file-server `
   -p 8084:80 `
-  -v $(pwd):/srv `
+  -v "${PWD}:/srv" `
   halverneus/static-file-server:latest
 ```
+
+> Если эта команда в Powershell не работает, то удалите из кода апострофы `
 
 в **Git-Bash/Linux/WSL 2.0/Mac**
 ```shell
